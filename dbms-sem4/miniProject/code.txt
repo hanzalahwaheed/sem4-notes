@@ -1,0 +1,18 @@
+CREATE TABLE  security_company (
+  assignment_id INT AUTO_INCREMENT PRIMARY KEY,
+  bodyguard_id INT references bodyguard(bodyguard_id),
+  vip_id INT references vip(vip_id),
+  start_date DATE,
+  end_date DATE
+)
+
+
+CREATE TABLE vip(
+  vip_id INT AUTO _INCREMENT primary key,
+  name VARCHAR(225),
+  gender VARCHAR(10),
+  phone varchar(225),
+  bodyguard_assigned INT references bodygurad(bodyguard_id)
+)
+
+
